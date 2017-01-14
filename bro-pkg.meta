@@ -1,0 +1,4 @@
+[package]
+description = Additional JSON-logging for Bro.
+tags = log, logging, JSON
+script_dir = scripts
