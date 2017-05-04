@@ -16,6 +16,9 @@ export {
 	## Format of timestamps for JSON-logfiles.
 	## See: :bro:see:`LogAscii::json_timestamps`
 	const timestamps_json = "JSON::TS_MILLIS" &redef;
+	## Separator for log field scopes.
+	## See: :bro:type:`Log::Filter`
+	const scope_sep_json = default_scope_sep &redef;
 }
 
 # Wrapper for path_func implementations, appending "-json"
@@ -48,6 +51,7 @@ event bro_init() &priority=-3
 				filter$path_func = json_path_func;
 			filter$config = config_json;
 			filter$interv = interv_json;
+			filter$scope_sep = scope_sep_json;
 			Log::add_filter(id, filter);
 			}
 		}
