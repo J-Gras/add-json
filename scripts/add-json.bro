@@ -5,6 +5,8 @@ module Log;
 export {
 	## Enables JSON-logfiles for all active streams
 	const enable_all_json = T &redef;
+	## Enables JSON-logfiles for all filters of a stream
+	const enable_all_filters_json = F &redef;
 	## Streams not to generate JSON-logfiles for
 	const exclude_json: set[Log::ID] = { } &redef;
 	## Streams to generate JSON-logfiles for
@@ -37,22 +39,30 @@ event bro_init() &priority=-3
 		["use_json"] = "T",
 		["json_timestamps"] = timestamps_json);
 
-	# Add filter for JSON output
-	for ( id in Log::active_streams )
+	local filters_copy = copy(Log::filters);
+	for ( [id, filter_name] in filters_copy )
 		{
-		if ( (enable_all_json || (id in include_json)) && (id !in exclude_json) )
-			{
-			local filter = copy(Log::get_filter(id, "default"));
-			filter$name = "default_json";
-			filter$writer = Log::WRITER_ASCII;
-			if ( filter?$path )
-				filter$path = string_cat(path_json, filter$path, "-json");
-			if ( filter?$path_func )
-				filter$path_func = json_path_func;
-			filter$config = config_json;
-			filter$interv = interv_json;
-			filter$scope_sep = scope_sep_json;
-			Log::add_filter(id, filter);
-			}
+		if ( !(enable_all_json || (id in include_json)) || (id in exclude_json) )
+			next; # Ignore unwanted logstreams
+
+		if ( !enable_all_filters_json && filter_name != "default" )
+			next; # Ignore unwanted filters
+
+		local filter = filters_copy[id, filter_name];
+		if ( filter$writer == Log::WRITER_ASCII && "use_json" in filter$config &&
+			 filter$config["use_json"] == "T")
+			next; # Ignore existing JSON filters
+
+		# Add new filter for JSON output (previously copied)
+		filter$name = string_cat(filter$name, "_json");
+		filter$writer = Log::WRITER_ASCII;
+		if ( filter?$path )
+			filter$path = string_cat(path_json, filter$path, "-json");
+		if ( filter?$path_func )
+			filter$path_func = json_path_func;
+		filter$config = config_json;
+		filter$interv = interv_json;
+		filter$scope_sep = scope_sep_json;
+		Log::add_filter(id, filter);
 		}
 	}

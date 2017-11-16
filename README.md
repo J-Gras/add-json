@@ -1,12 +1,13 @@
 # Add-JSON
 
-This package provides additional JSON-logging for Bro. By default a JSON log is enabled
-for every logging stream (original filename suffixed by `-json`). For further configuration,
-the following options are available:
+This package provides additional JSON-logging for Bro. By default a JSON log is enabled for every
+logging stream (original filename suffixed by `-json`). For further configuration, the following
+options are available:
 
 Option                       | Default Value       | Description
------------------------------|---------------------|-----------------------------------------------
+-----------------------------|---------------------|---------------------------------------------------
 `enable_all_json: bool`      | `T`                 | Enables JSON-logfiles for all active streams
+`enable_all_filters_json`    | `F`                 | Enables JSON-logfiles for all filters of a stream
 `exclude_json: set[Log::ID]` | `{ }`               | Streams **not** to generate JSON-logfiles for
 `include_json: set[Log::ID]` | `{ }`               | Streams to generate JSON-logfiles for
 `path_json: string`          | default path        | Path to the additional JSON-logfiles
@@ -14,12 +15,22 @@ Option                       | Default Value       | Description
 `timestamps_json: string`    | `"JSON::TS_MILLIS"` | Format of timestamps for JSON-logfiles.
 `scope_sep_json: string`     | default separator   | Separator for log field scopes.
 
-If, for example, your postprocessing of the files cannot handle dots in field names, you can
-add the following to you `local.bro` to replace them with underscores:
+If, for example, the postprocessing of JSON-logs cannot handle dots in field names, the following can
+be added to `local.bro`, to replace dots with underscores:
 
     redef Log::scope_sep_json = "_";
 
-For more details on the underlying filter options see:
-https://www.bro.org/sphinx/scripts/base/frameworks/logging/main.bro.html#type-Log::Filter
+For more details on the underlying filter options see [Bro's documentation
+](https://www.bro.org/sphinx/scripts/base/frameworks/logging/main.bro.html#type-Log::Filter)
+of the Logging Framework.
 
-**Note:** The script has been tested with Bro version 2.5.
+## Testing
+
+Tests using Bro's `btest` are available in a separate branch `tests`. The tests can be run manually
+or automated during installation with bro-pkg (`bro-pkg install add-json --version tests`).
+
+## Custom Logs
+
+The add-json package sets up additional filters for the configured logs during initialization. As
+the corresponding `bro_init` event handler is executed with a priority of -3, everything (streams
+and filters) setup with a _higher_ priority than -3 will be considered by the script.
