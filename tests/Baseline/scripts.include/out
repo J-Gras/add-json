@@ -1,0 +1,7 @@
+conn-json.log
+conn.log
+dns-json.log
+dns.log
+http.log
+packet_filter.log
+weird.log
