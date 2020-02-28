@@ -23,14 +23,21 @@ export {
 	const scope_sep_json = default_scope_sep &redef;
 }
 
-# Wrapper for path_func implementations, appending "-json"
-function json_path_func(id: Log::ID, path: string, rec: any): string
+type path_func_type: function(id: Log::ID, path: string, rec: any): string;
+
+# Create a path_func wrapper that appends the "-json" suffix
+function make_path_func(orig_path_func: path_func_type): path_func_type
 	{
-	local filter = Log::get_filter(id, "default");
-	if ( /-json/ in path )
-		path = path[:-5];
-	local new_path = filter$path_func(id, path, rec);
-	return string_cat(new_path, "-json");
+	return function(id: Log::ID, path: string, rec: any): string
+		{
+		if ( /-json/ in path )
+			# As path is set to the previous result of the function, the
+			# the "-json" suffix is removed to provide the correct string
+			# to the original path_func.
+			path = path[:-5];
+		local orig_path = orig_path_func(id, path, rec);
+		return string_cat(orig_path, "-json");
+		};
 	}
 
 event zeek_init() &priority=-3
@@ -59,7 +66,7 @@ event zeek_init() &priority=-3
 		if ( filter?$path )
 			filter$path = string_cat(path_json, filter$path, "-json");
 		if ( filter?$path_func )
-			filter$path_func = json_path_func;
+			filter$path_func = make_path_func(filter$path_func);
 		filter$config = config_json;
 		filter$interv = interv_json;
 		filter$scope_sep = scope_sep_json;
