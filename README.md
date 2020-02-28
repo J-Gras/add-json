@@ -24,11 +24,6 @@ For more details on the underlying filter options see [Zeek's documentation
 ](https://docs.zeek.org/en/current/scripts/base/frameworks/logging/main.zeek.html#type-Log::Filter)
 of the Logging Framework.
 
-## Testing
-
-Tests using Zeek's `btest` are available in a separate branch `tests`. The tests can be run manually
-or automated during installation (`zkg install add-json --version tests`).
-
 ## Custom Logs
 
 The add-json package sets up additional filters for the configured logs during initialization. As
