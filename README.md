@@ -16,7 +16,7 @@ Option                       | Default Value       | Description
 `scope_sep_json: string`     | default separator   | Separator for log field scopes.
 
 If, for example, the postprocessing of JSON-logs cannot handle dots in field names, the following can
-be added to `local.bro`, to replace dots with underscores:
+be added to `local.zeek`, to replace dots with underscores:
 
     redef Log::scope_sep_json = "_";
 
@@ -27,7 +27,7 @@ of the Logging Framework.
 ## Testing
 
 Tests using Zeek's `btest` are available in a separate branch `tests`. The tests can be run manually
-or automated during installation with bro-pkg (`bro-pkg install add-json --version tests`).
+or automated during installation (`zkg install add-json --version tests`).
 
 ## Custom Logs
 
