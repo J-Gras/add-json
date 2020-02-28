@@ -1,4 +1,4 @@
-##! Additional JSON-logging for Bro.
+##! Additional JSON-logging for Zeek.
 
 module Log;
 
@@ -16,10 +16,10 @@ export {
 	## Rotation interval for JSON-logfiles
 	const interv_json = default_rotation_interval &redef;
 	## Format of timestamps for JSON-logfiles.
-	## See: :bro:see:`LogAscii::json_timestamps`
+	## See: :zeek:see:`LogAscii::json_timestamps`
 	const timestamps_json = "JSON::TS_MILLIS" &redef;
 	## Separator for log field scopes.
-	## See: :bro:type:`Log::Filter`
+	## See: :zeek:type:`Log::Filter`
 	const scope_sep_json = default_scope_sep &redef;
 }
 
@@ -33,7 +33,7 @@ function json_path_func(id: Log::ID, path: string, rec: any): string
 	return string_cat(new_path, "-json");
 	}
 
-event bro_init() &priority=-3
+event zeek_init() &priority=-3
 	{
 	const config_json = table(
 		["use_json"] = "T",
@@ -43,7 +43,7 @@ event bro_init() &priority=-3
 	for ( [id, filter_name] in filters_copy )
 		{
 		if ( !(enable_all_json || (id in include_json)) || (id in exclude_json) )
-			next; # Ignore unwanted logstreams
+			next; # Ignore unwanted log streams
 
 		if ( !enable_all_filters_json && filter_name != "default" )
 			next; # Ignore unwanted filters

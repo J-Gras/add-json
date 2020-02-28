@@ -1,6 +1,6 @@
 # Add-JSON
 
-This package provides additional JSON-logging for Bro. By default a JSON log is enabled for every
+This package provides additional JSON-logging for Zeek. By default a JSON log is enabled for every
 logging stream (original filename suffixed by `-json`). For further configuration, the following
 options are available:
 
@@ -20,17 +20,17 @@ be added to `local.bro`, to replace dots with underscores:
 
     redef Log::scope_sep_json = "_";
 
-For more details on the underlying filter options see [Bro's documentation
-](https://www.bro.org/sphinx/scripts/base/frameworks/logging/main.bro.html#type-Log::Filter)
+For more details on the underlying filter options see [Zeek's documentation
+](https://docs.zeek.org/en/current/scripts/base/frameworks/logging/main.zeek.html#type-Log::Filter)
 of the Logging Framework.
 
 ## Testing
 
-Tests using Bro's `btest` are available in a separate branch `tests`. The tests can be run manually
+Tests using Zeek's `btest` are available in a separate branch `tests`. The tests can be run manually
 or automated during installation with bro-pkg (`bro-pkg install add-json --version tests`).
 
 ## Custom Logs
 
 The add-json package sets up additional filters for the configured logs during initialization. As
-the corresponding `bro_init` event handler is executed with a priority of -3, everything (streams
+the corresponding `zeek_init` event handler is executed with a priority of -3, everything (streams
 and filters) setup with a _higher_ priority than -3 will be considered by the script.

@@ -1,5 +1,5 @@
 #
-# @TEST-EXEC: bro -C -r $TRACES/wikipedia.trace ../../../scripts/ %INPUT
+# @TEST-EXEC: zeek -C -r $TRACES/wikipedia.trace ../../../scripts/ %INPUT
 # @TEST-EXEC: cat *.log > out
 # @TEST-EXEC: btest-diff out
 

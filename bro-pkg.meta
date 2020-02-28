@@ -1,5 +1,5 @@
 [package]
-description = Additional JSON-logging for Bro.
+description = Additional JSON-logging for Zeek.
 tags = log, logging, JSON
 script_dir = scripts
 test_command = cd tests && btest -d
