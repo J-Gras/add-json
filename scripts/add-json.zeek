@@ -28,7 +28,7 @@ type path_func_type: function(id: Log::ID, path: string, rec: any): string;
 # Create a path_func wrapper that appends the "-json" suffix
 function make_path_func(orig_path_func: path_func_type): path_func_type
 	{
-	return function(id: Log::ID, path: string, rec: any): string
+	return function [orig_path_func] (id: Log::ID, path: string, rec: any): string
 		{
 		if ( /-json/ in path )
 			# As path is set to the previous result of the function, the
