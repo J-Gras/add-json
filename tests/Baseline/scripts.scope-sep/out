@@ -101,9 +101,9 @@ XXXXXXXXXX.XXXXXX	CFSwNi4CNGxcuffo49	141.142.220.235	6705	173.192.163.128	80	tcp
 {"ts":XXXXXXXXXXXXX,"uid":"CV5WJ42jPYbNW9JNWf","id_orig_h":"141.142.220.226","id_orig_p":137,"id_resp_h":"141.142.220.255","id_resp_p":137,"proto":"udp","trans_id":65394,"query":"BRWC0CB383D1F42","qclass":1,"qclass_name":"C_INTERNET","qtype":32,"qtype_name":"NB","AA":false,"TC":false,"RD":true,"RA":false,"Z":1,"rejected":false}
 {"ts":XXXXXXXXXXXXX,"uid":"CV5WJ42jPYbNW9JNWf","id_orig_h":"141.142.220.226","id_orig_p":137,"id_resp_h":"141.142.220.255","id_resp_p":137,"proto":"udp","trans_id":65394,"query":"BRWC0CB383D1F42","qclass":1,"qclass_name":"C_INTERNET","qtype":32,"qtype_name":"NB","AA":false,"TC":false,"RD":true,"RA":false,"Z":1,"rejected":false}
 {"ts":XXXXXXXXXXXXX,"uid":"CV5WJ42jPYbNW9JNWf","id_orig_h":"141.142.220.226","id_orig_p":137,"id_resp_h":"141.142.220.255","id_resp_p":137,"proto":"udp","trans_id":65394,"query":"BRWC0CB383D1F42","qclass":1,"qclass_name":"C_INTERNET","qtype":32,"qtype_name":"NB","AA":false,"TC":false,"RD":true,"RA":false,"Z":1,"rejected":false}
+{"ts":XXXXXXXXXXXXX,"uid":"CV5WJ42jPYbNW9JNWf","id_orig_h":"141.142.220.226","id_orig_p":137,"id_resp_h":"141.142.220.255","id_resp_p":137,"proto":"udp","trans_id":65390,"query":"BRWC0CB383D1F42","qclass":1,"qclass_name":"C_INTERNET","qtype":32,"qtype_name":"NB","AA":false,"TC":false,"RD":true,"RA":false,"Z":1,"rejected":false}
+{"ts":XXXXXXXXXXXXX,"uid":"CV5WJ42jPYbNW9JNWf","id_orig_h":"141.142.220.226","id_orig_p":137,"id_resp_h":"141.142.220.255","id_resp_p":137,"proto":"udp","trans_id":65390,"query":"BRWC0CB383D1F42","qclass":1,"qclass_name":"C_INTERNET","qtype":32,"qtype_name":"NB","AA":false,"TC":false,"RD":true,"RA":false,"Z":1,"rejected":false}
 {"ts":XXXXXXXXXXXXX,"uid":"CV5WJ42jPYbNW9JNWf","id_orig_h":"141.142.220.226","id_orig_p":137,"id_resp_h":"141.142.220.255","id_resp_p":137,"proto":"udp","trans_id":65398,"query":"BRWC0CB383D1F42","qclass":1,"qclass_name":"C_INTERNET","qtype":32,"qtype_name":"NB","AA":false,"TC":false,"RD":true,"RA":false,"Z":1,"rejected":false}
-{"ts":XXXXXXXXXXXXX,"uid":"CV5WJ42jPYbNW9JNWf","id_orig_h":"141.142.220.226","id_orig_p":137,"id_resp_h":"141.142.220.255","id_resp_p":137,"proto":"udp","trans_id":65390,"query":"BRWC0CB383D1F42","qclass":1,"qclass_name":"C_INTERNET","qtype":32,"qtype_name":"NB","AA":false,"TC":false,"RD":true,"RA":false,"Z":1,"rejected":false}
-{"ts":XXXXXXXXXXXXX,"uid":"CV5WJ42jPYbNW9JNWf","id_orig_h":"141.142.220.226","id_orig_p":137,"id_resp_h":"141.142.220.255","id_resp_p":137,"proto":"udp","trans_id":65390,"query":"BRWC0CB383D1F42","qclass":1,"qclass_name":"C_INTERNET","qtype":32,"qtype_name":"NB","AA":false,"TC":false,"RD":true,"RA":false,"Z":1,"rejected":false}
 {"ts":XXXXXXXXXXXXX,"uid":"CPhDKt12KQPUVbQz06","id_orig_h":"fe80::3074:17d5:2052:c324","id_orig_p":65373,"id_resp_h":"ff02::1:3","id_resp_p":5355,"proto":"udp","trans_id":17952,"query":"brwc0cb383d1f42","qclass":1,"qclass_name":"C_INTERNET","qtype":1,"qtype_name":"A","AA":false,"TC":false,"RD":false,"RA":false,"Z":0,"rejected":false}
 {"ts":XXXXXXXXXXXXX,"uid":"CPhDKt12KQPUVbQz06","id_orig_h":"fe80::3074:17d5:2052:c324","id_orig_p":65373,"id_resp_h":"ff02::1:3","id_resp_p":5355,"proto":"udp","trans_id":17952,"query":"brwc0cb383d1f42","qclass":1,"qclass_name":"C_INTERNET","qtype":1,"qtype_name":"A","AA":false,"TC":false,"RD":false,"RA":false,"Z":0,"rejected":false}
 {"ts":XXXXXXXXXXXXX,"uid":"CAnFrb2Cvxr5T7quOc","id_orig_h":"141.142.220.226","id_orig_p":55131,"id_resp_h":"224.0.0.252","id_resp_p":5355,"proto":"udp","trans_id":17952,"query":"brwc0cb383d1f42","qclass":1,"qclass_name":"C_INTERNET","qtype":1,"qtype_name":"A","AA":false,"TC":false,"RD":false,"RA":false,"Z":0,"rejected":false}
@@ -144,9 +144,9 @@ XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp
 XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp	65394	-	BRWC0CB383D1F42	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
 XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp	65394	-	BRWC0CB383D1F42	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
 XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp	65394	-	BRWC0CB383D1F42	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
+XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp	65390	-	BRWC0CB383D1F42	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
+XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp	65390	-	BRWC0CB383D1F42	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
 XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp	65398	-	BRWC0CB383D1F42	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
-XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp	65390	-	BRWC0CB383D1F42	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
-XXXXXXXXXX.XXXXXX	CV5WJ42jPYbNW9JNWf	141.142.220.226	137	141.142.220.255	137	udp	65390	-	BRWC0CB383D1F42	1	C_INTERNET	32	NB	-	-	F	F	T	F	1	-	-	F
 XXXXXXXXXX.XXXXXX	CPhDKt12KQPUVbQz06	fe80::3074:17d5:2052:c324	65373	ff02::1:3	5355	udp	17952	-	brwc0cb383d1f42	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F
 XXXXXXXXXX.XXXXXX	CPhDKt12KQPUVbQz06	fe80::3074:17d5:2052:c324	65373	ff02::1:3	5355	udp	17952	-	brwc0cb383d1f42	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F
 XXXXXXXXXX.XXXXXX	CAnFrb2Cvxr5T7quOc	141.142.220.226	55131	224.0.0.252	5355	udp	17952	-	brwc0cb383d1f42	1	C_INTERNET	1	A	-	-	F	F	F	F	0	-	-	F
@@ -208,17 +208,4 @@ XXXXXXXXXX.XXXXXX	CLNN1k2QMum1aexUK7	141.142.220.118	50001	208.80.152.3	80	2	GET
 #fields	ts	node	filter	init	success
 #types	time	string	string	bool	bool
 XXXXXXXXXX.XXXXXX	zeek	ip or not ip	T	T
-#close XXXX-XX-XX-XX-XX-XX
->>> weird-json.log
-{"ts":XXXXXXXXXXXXX,"name":"non_ip_packet_in_ethernet","notice":false,"peer":"zeek"}
->>> weird.log
-#separator \x09
-#set_separator	,
-#empty_field	(empty)
-#unset_field	-
-#path	weird
-#open XXXX-XX-XX-XX-XX-XX
-#fields	ts	uid	id.orig_h	id.orig_p	id.resp_h	id.resp_p	name	addl	notice	peer
-#types	time	string	addr	port	addr	port	string	string	bool	string
-XXXXXXXXXX.XXXXXX	-	-	-	-	-	non_ip_packet_in_ethernet	-	F	zeek
 #close XXXX-XX-XX-XX-XX-XX
